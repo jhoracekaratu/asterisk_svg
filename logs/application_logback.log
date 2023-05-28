@@ -1,410 +1,220 @@
-2023-05-28 09:01:46 [restartedMain] INFO  : Starting ClientManagerApplication using Java 19.0.2 with PID 36090 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
-2023-05-28 09:01:46 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
-2023-05-28 09:01:46 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-05-28 09:01:46 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-05-28 09:01:48 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-28 09:01:48 [restartedMain] INFO  : Finished Spring Data repository scanning in 71 ms. Found 2 JPA repository interfaces.
-2023-05-28 09:01:49 [restartedMain] INFO  : Tomcat initialized with port(s): 8081 (http)
-2023-05-28 09:01:49 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:01:49 [restartedMain] INFO  : Starting service [Tomcat]
-2023-05-28 09:01:49 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-05-28 09:01:49 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
-2023-05-28 09:01:49 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 3032 ms
-2023-05-28 09:01:50 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-28 09:01:50 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-28 09:01:50 [restartedMain] INFO  : HikariPool-1 - Starting...
-2023-05-28 09:01:51 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58e02dc6
-2023-05-28 09:01:51 [restartedMain] INFO  : HikariPool-1 - Start completed.
-2023-05-28 09:01:51 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-05-28 09:01:52 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-28 09:01:52 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:01:53 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-28 09:01:53 [restartedMain] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'configure' defined in class path resource [com/javaguidance/security/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-2023-05-28 09:01:53 [restartedMain] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:01:53 [restartedMain] INFO  : HikariPool-1 - Shutdown initiated...
-2023-05-28 09:01:53 [restartedMain] INFO  : HikariPool-1 - Shutdown completed.
-2023-05-28 09:01:53 [restartedMain] INFO  : Stopping service [Tomcat]
-2023-05-28 09:01:54 [restartedMain] INFO  : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-05-28 09:01:54 [restartedMain] ERROR : Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'configure' defined in class path resource [com/javaguidance/security/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:818)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:770)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
-	at com.javaguidance.ClientManagerApplication.main(ClientManagerApplication.java:14)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/javaguidance/security/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1633)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1597)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1488)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:810)
-	... 23 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 39 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1138)
-	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:106)
-	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:184)
-	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:211)
-	at com.javaguidance.security.SecurityConfig.lambda$configure$0(SecurityConfig.java:27)
-	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:1424)
-	at com.javaguidance.security.SecurityConfig.configure(SecurityConfig.java:25)
-	at com.javaguidance.security.SecurityConfig$$SpringCGLIB$$0.CGLIB$configure$0(<generated>)
-	at com.javaguidance.security.SecurityConfig$$SpringCGLIB$$2.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at com.javaguidance.security.SecurityConfig$$SpringCGLIB$$0.configure(<generated>)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
-	... 40 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:663)
-	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1286)
-	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:368)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:109)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:97)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	... 61 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:438)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	... 74 common frames omitted
-2023-05-28 09:02:52 [restartedMain] INFO  : Starting ClientManagerApplication using Java 19.0.2 with PID 36275 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
-2023-05-28 09:02:52 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
-2023-05-28 09:02:52 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-05-28 09:02:52 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-05-28 09:02:54 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-28 09:02:54 [restartedMain] INFO  : Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
-2023-05-28 09:02:55 [restartedMain] INFO  : Tomcat initialized with port(s): 8081 (http)
-2023-05-28 09:02:55 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:02:55 [restartedMain] INFO  : Starting service [Tomcat]
-2023-05-28 09:02:55 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-05-28 09:02:55 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
-2023-05-28 09:02:55 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 3125 ms
-2023-05-28 09:02:56 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-28 09:02:56 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-28 09:02:56 [restartedMain] INFO  : HikariPool-1 - Starting...
-2023-05-28 09:02:57 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bd67b96
-2023-05-28 09:02:57 [restartedMain] INFO  : HikariPool-1 - Start completed.
-2023-05-28 09:02:57 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-05-28 09:02:58 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-28 09:02:58 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:02:59 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-28 09:02:59 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@541c2eb9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52cc9026, org.springframework.security.web.context.SecurityContextHolderFilter@2167ded1, org.springframework.security.web.header.HeaderWriterFilter@5b88d1c6, org.springframework.security.web.csrf.CsrfFilter@7c9492f7, org.springframework.security.web.authentication.logout.LogoutFilter@615c0feb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ec5026e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35612349, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c33f498, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38e444c4, org.springframework.security.web.access.ExceptionTranslationFilter@3c54db9a, org.springframework.security.web.access.intercept.AuthorizationFilter@6422ba2e]
-2023-05-28 09:03:02 [restartedMain] INFO  : LiveReload server is running on port 35729
-2023-05-28 09:03:02 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:03:02 [restartedMain] INFO  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-05-28 09:03:02 [restartedMain] INFO  : Started ClientManagerApplication in 10.789 seconds (process running for 11.88)
-2023-05-28 09:03:02 [restartedMain] INFO  : Application started
-2023-05-28 09:06:52 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:07:10 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2023-05-28 09:07:34 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2023-05-28 09:12:31 [restartedMain] INFO  : Starting ClientManagerApplication using Java 19.0.2 with PID 39277 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
-2023-05-28 09:12:31 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
-2023-05-28 09:12:32 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-05-28 09:12:32 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-05-28 09:12:34 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-28 09:12:35 [restartedMain] INFO  : Finished Spring Data repository scanning in 260 ms. Found 2 JPA repository interfaces.
-2023-05-28 09:12:36 [restartedMain] INFO  : Tomcat initialized with port(s): 8081 (http)
-2023-05-28 09:12:36 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:12:36 [restartedMain] INFO  : Starting service [Tomcat]
-2023-05-28 09:12:36 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-05-28 09:12:36 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
-2023-05-28 09:12:36 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 4204 ms
-2023-05-28 09:12:36 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-28 09:12:36 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-28 09:12:37 [restartedMain] INFO  : HikariPool-1 - Starting...
-2023-05-28 09:12:38 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2675ab8a
-2023-05-28 09:12:38 [restartedMain] INFO  : HikariPool-1 - Start completed.
-2023-05-28 09:12:38 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-05-28 09:12:39 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-28 09:12:39 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:12:39 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-28 09:12:40 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d49c55f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73ee48a0, org.springframework.security.web.context.SecurityContextHolderFilter@21e8fcb8, org.springframework.security.web.header.HeaderWriterFilter@54912e82, org.springframework.security.web.csrf.CsrfFilter@17f0f954, org.springframework.security.web.authentication.logout.LogoutFilter@1081d22e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1c32536d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@80a8ca9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f50d6ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@444d9253, org.springframework.security.web.access.ExceptionTranslationFilter@70f4eaa4, org.springframework.security.web.access.intercept.AuthorizationFilter@d22e014]
-2023-05-28 09:12:43 [restartedMain] INFO  : LiveReload server is running on port 35729
-2023-05-28 09:12:43 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:12:43 [restartedMain] INFO  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-05-28 09:12:43 [restartedMain] INFO  : Started ClientManagerApplication in 13.035 seconds (process running for 14.399)
-2023-05-28 09:12:43 [restartedMain] INFO  : Application started
-2023-05-28 09:13:31 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-28 09:13:31 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
-2023-05-28 09:13:31 [http-nio-8081-exec-1] INFO  : Completed initialization in 3 ms
-2023-05-28 09:13:50 [http-nio-8081-exec-3] INFO  : PostController::getPost : 1
-2023-05-28 09:13:50 [http-nio-8081-exec-3] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
-2023-05-28 09:17:38 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:17:38 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2023-05-28 09:17:38 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2023-05-28 09:17:45 [restartedMain] INFO  : Starting ClientManagerApplication using Java 19.0.2 with PID 39652 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
-2023-05-28 09:17:45 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
-2023-05-28 09:17:45 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-05-28 09:17:45 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-05-28 09:17:46 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-28 09:17:47 [restartedMain] INFO  : Finished Spring Data repository scanning in 136 ms. Found 2 JPA repository interfaces.
-2023-05-28 09:17:48 [restartedMain] INFO  : Tomcat initialized with port(s): 8081 (http)
-2023-05-28 09:17:48 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:17:48 [restartedMain] INFO  : Starting service [Tomcat]
-2023-05-28 09:17:48 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-05-28 09:17:48 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
-2023-05-28 09:17:48 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 3060 ms
-2023-05-28 09:17:48 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-28 09:17:48 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-28 09:17:49 [restartedMain] INFO  : HikariPool-1 - Starting...
-2023-05-28 09:17:49 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38c9531d
-2023-05-28 09:17:49 [restartedMain] INFO  : HikariPool-1 - Start completed.
-2023-05-28 09:17:49 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-05-28 09:17:51 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-28 09:17:51 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:17:51 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-28 09:17:52 [restartedMain] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'configure' defined in class path resource [com/javaguidance/security/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-2023-05-28 09:17:52 [restartedMain] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:17:52 [restartedMain] INFO  : HikariPool-1 - Shutdown initiated...
-2023-05-28 09:17:52 [restartedMain] INFO  : HikariPool-1 - Shutdown completed.
-2023-05-28 09:17:52 [restartedMain] INFO  : Stopping service [Tomcat]
-2023-05-28 09:17:52 [restartedMain] INFO  : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-05-28 09:17:52 [restartedMain] ERROR : Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChains' parameter 0: Error creating bean with name 'configure' defined in class path resource [com/javaguidance/security/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:818)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:770)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
-	at com.javaguidance.ClientManagerApplication.main(ClientManagerApplication.java:14)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/javaguidance/security/SecurityConfig.class]: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1633)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1597)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1488)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1375)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:810)
-	... 23 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.SecurityFilterChain]: Factory method 'configure' threw exception with message: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 39 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1138)
-	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:106)
-	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:184)
-	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.requestMatchers(AbstractRequestMatcherRegistry.java:211)
-	at com.javaguidance.security.SecurityConfig.lambda$configure$0(SecurityConfig.java:27)
-	at org.springframework.security.config.annotation.web.builders.HttpSecurity.authorizeHttpRequests(HttpSecurity.java:1424)
-	at com.javaguidance.security.SecurityConfig.configure(SecurityConfig.java:25)
-	at com.javaguidance.security.SecurityConfig$$SpringCGLIB$$0.CGLIB$configure$0(<generated>)
-	at com.javaguidance.security.SecurityConfig$$SpringCGLIB$$2.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at com.javaguidance.security.SecurityConfig$$SpringCGLIB$$0.configure(<generated>)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
-	... 40 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:663)
-	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1286)
-	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:368)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:109)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:97)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	... 61 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'postController' method 
-com.javaguidance.controllers.PostController#updatePost(Post)
-to {POST [/post]}: There is already 'postController' bean method
-com.javaguidance.controllers.PostController#sendPost(Post) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:667)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:633)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:438)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:225)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
-	... 74 common frames omitted
-2023-05-28 09:18:48 [restartedMain] INFO  : Starting ClientManagerApplication using Java 19.0.2 with PID 39781 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
-2023-05-28 09:18:48 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
-2023-05-28 09:18:48 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-05-28 09:18:48 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-05-28 09:18:50 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-28 09:18:50 [restartedMain] INFO  : Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
-2023-05-28 09:18:52 [restartedMain] INFO  : Tomcat initialized with port(s): 8081 (http)
-2023-05-28 09:18:52 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:18:52 [restartedMain] INFO  : Starting service [Tomcat]
-2023-05-28 09:18:52 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
-2023-05-28 09:18:52 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
-2023-05-28 09:18:52 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 3449 ms
-2023-05-28 09:18:52 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-28 09:18:52 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-28 09:18:53 [restartedMain] INFO  : HikariPool-1 - Starting...
-2023-05-28 09:18:53 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a6275d1
-2023-05-28 09:18:53 [restartedMain] INFO  : HikariPool-1 - Start completed.
-2023-05-28 09:18:53 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-05-28 09:18:54 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-28 09:18:54 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:18:55 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-28 09:18:56 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51c79c7a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@556606bb, org.springframework.security.web.context.SecurityContextHolderFilter@197eb0e3, org.springframework.security.web.header.HeaderWriterFilter@11104007, org.springframework.security.web.csrf.CsrfFilter@63e15d18, org.springframework.security.web.authentication.logout.LogoutFilter@45442718, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7a8fd54c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1eb9722c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6828d89e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6224fa90, org.springframework.security.web.access.ExceptionTranslationFilter@405354a3, org.springframework.security.web.access.intercept.AuthorizationFilter@6c5862e2]
-2023-05-28 09:18:58 [restartedMain] INFO  : LiveReload server is running on port 35729
-2023-05-28 09:18:58 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8081"]
-2023-05-28 09:18:58 [restartedMain] INFO  : Tomcat started on port(s): 8081 (http) with context path ''
-2023-05-28 09:18:58 [restartedMain] INFO  : Started ClientManagerApplication in 11.231 seconds (process running for 12.473)
-2023-05-28 09:18:58 [restartedMain] INFO  : Application started
-2023-05-28 09:19:40 [http-nio-8081-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-28 09:19:40 [http-nio-8081-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
-2023-05-28 09:19:40 [http-nio-8081-exec-1] INFO  : Completed initialization in 3 ms
-2023-05-28 09:20:48 [http-nio-8081-exec-8] INFO  : PostController::getPost : 1
-2023-05-28 09:20:49 [http-nio-8081-exec-8] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
-2023-05-28 09:23:06 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-05-28 09:23:06 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2023-05-28 09:23:06 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:12:11 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h2m1s265ms242µs536ns).
+2023-05-29 00:12:15 [http-nio-8081-exec-7] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-7] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:15 [http-nio-8081-exec-23] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-24] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-26] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-24] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:15 [http-nio-8081-exec-23] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:15 [http-nio-8081-exec-26] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:16 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:12:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:12:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:15:33 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 38306 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:15:33 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:15:34 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:15:34 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:15:34 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:15:34 [restartedMain] INFO  : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:15:35 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:15:35 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:15:35 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:15:35 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:15:35 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:15:35 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1690 ms
+2023-05-29 00:15:35 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:15:36 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:15:36 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:15:36 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c826180
+2023-05-29 00:15:36 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:15:36 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:15:37 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:15:37 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:15:37 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:15:38 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@110a1abe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c75e03c, org.springframework.security.web.context.SecurityContextHolderFilter@e08d2b1, org.springframework.security.web.header.HeaderWriterFilter@38f8ed51, org.springframework.security.web.csrf.CsrfFilter@3a7a926e, org.springframework.security.web.authentication.logout.LogoutFilter@19b19cfc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7810a249, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32390668, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d77257e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d066954, org.springframework.security.web.access.ExceptionTranslationFilter@22fa4ec0, org.springframework.security.web.access.intercept.AuthorizationFilter@778112b5]
+2023-05-29 00:15:39 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:15:39 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:15:39 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:15:39 [restartedMain] INFO  : Started ClientManagerApplication in 6.255 seconds (process running for 6.772)
+2023-05-29 00:15:39 [restartedMain] INFO  : Application started
+2023-05-29 00:16:10 [http-nio-8082-exec-2] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:16:10 [http-nio-8082-exec-2] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:16:10 [http-nio-8082-exec-2] INFO  : Completed initialization in 3 ms
+2023-05-29 00:16:24 [http-nio-8082-exec-3] INFO  : PostController::getPost : 1
+2023-05-29 00:16:24 [http-nio-8082-exec-3] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:21:16 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:21:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:21:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:21:36 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 38956 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:21:36 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:21:36 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:21:36 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:21:37 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:21:37 [restartedMain] INFO  : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:21:38 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:21:38 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:21:38 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:21:38 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:21:38 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:21:38 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1704 ms
+2023-05-29 00:21:38 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:21:38 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:21:39 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:21:39 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c396388
+2023-05-29 00:21:39 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:21:39 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:21:40 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:21:40 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:21:40 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:21:41 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b688fe8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7810a249, org.springframework.security.web.context.SecurityContextHolderFilter@17c7fb28, org.springframework.security.web.header.HeaderWriterFilter@af4bc95, org.springframework.security.web.csrf.CsrfFilter@3551b81e, org.springframework.security.web.authentication.logout.LogoutFilter@3500faec, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c75ebdf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56c2aba3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32390668, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d3596f0, org.springframework.security.web.access.ExceptionTranslationFilter@d87f609, org.springframework.security.web.access.intercept.AuthorizationFilter@562438de]
+2023-05-29 00:21:42 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:21:42 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:21:42 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:21:42 [restartedMain] INFO  : Started ClientManagerApplication in 6.411 seconds (process running for 6.905)
+2023-05-29 00:21:42 [restartedMain] INFO  : Application started
+2023-05-29 00:22:07 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:22:07 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:22:07 [http-nio-8082-exec-1] INFO  : Completed initialization in 1 ms
+2023-05-29 00:25:10 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:25:10 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:25:10 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:25:30 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 39300 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:25:30 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:25:30 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:25:30 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:25:31 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:25:31 [restartedMain] INFO  : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:25:32 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:25:32 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:25:32 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:25:32 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:25:32 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:25:32 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1689 ms
+2023-05-29 00:25:32 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:25:32 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:25:32 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:25:33 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c396388
+2023-05-29 00:25:33 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:25:33 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:25:34 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:25:34 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:25:34 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:25:34 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b688fe8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7810a249, org.springframework.security.web.context.SecurityContextHolderFilter@17c7fb28, org.springframework.security.web.header.HeaderWriterFilter@af4bc95, org.springframework.security.web.csrf.CsrfFilter@3551b81e, org.springframework.security.web.authentication.logout.LogoutFilter@3500faec, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c75ebdf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56c2aba3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32390668, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d3596f0, org.springframework.security.web.access.ExceptionTranslationFilter@d87f609, org.springframework.security.web.access.intercept.AuthorizationFilter@562438de]
+2023-05-29 00:25:36 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:25:36 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:25:36 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:25:36 [restartedMain] INFO  : Started ClientManagerApplication in 6.365 seconds (process running for 6.862)
+2023-05-29 00:25:36 [restartedMain] INFO  : Application started
+2023-05-29 00:25:45 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:25:45 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:25:45 [http-nio-8082-exec-1] INFO  : Completed initialization in 3 ms
+2023-05-29 00:26:27 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:26:27 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:26:27 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:33:45 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 40727 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:33:45 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:33:45 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:33:45 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:33:46 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:33:46 [restartedMain] INFO  : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:33:46 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:33:46 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:33:46 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:33:46 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:33:47 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:33:47 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1584 ms
+2023-05-29 00:33:47 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:33:47 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:33:47 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:33:48 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8a21417
+2023-05-29 00:33:48 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:33:48 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:33:49 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:33:49 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:33:49 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:33:49 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6db6be32, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dc7f724, org.springframework.security.web.context.SecurityContextHolderFilter@6c894634, org.springframework.security.web.header.HeaderWriterFilter@54bbcd63, org.springframework.security.web.csrf.CsrfFilter@3afacc8e, org.springframework.security.web.authentication.logout.LogoutFilter@5ea70868, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ecfddd5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a5001bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43db295a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c37019d, org.springframework.security.web.access.ExceptionTranslationFilter@5f83ae34, org.springframework.security.web.access.intercept.AuthorizationFilter@1753e7bb]
+2023-05-29 00:33:50 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:33:50 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:33:50 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:33:50 [restartedMain] INFO  : Started ClientManagerApplication in 6.139 seconds (process running for 6.593)
+2023-05-29 00:33:50 [restartedMain] INFO  : Application started
+2023-05-29 00:35:25 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:35:25 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:35:25 [http-nio-8082-exec-1] INFO  : Completed initialization in 2 ms
+2023-05-29 00:36:06 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:36:06 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:36:06 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:52:23 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 42808 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:52:23 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:52:23 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:52:23 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:52:24 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:52:24 [restartedMain] INFO  : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:52:25 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:52:25 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:52:25 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:52:25 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:52:25 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:52:25 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1634 ms
+2023-05-29 00:52:25 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:52:25 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:52:26 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:52:26 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4206d7b4
+2023-05-29 00:52:26 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:52:26 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:52:27 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:52:27 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:52:27 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:52:28 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1c37019d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63dcac14, org.springframework.security.web.context.SecurityContextHolderFilter@6c894634, org.springframework.security.web.header.HeaderWriterFilter@54bbcd63, org.springframework.web.filter.CorsFilter@3bc3d973, org.springframework.security.web.csrf.CsrfFilter@3afacc8e, org.springframework.security.web.authentication.logout.LogoutFilter@5ea70868, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@778112b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a5001bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43db295a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@393f67f8, org.springframework.security.web.access.ExceptionTranslationFilter@5f83ae34, org.springframework.security.web.access.intercept.AuthorizationFilter@1753e7bb]
+2023-05-29 00:52:29 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:52:29 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:52:29 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:52:29 [restartedMain] INFO  : Started ClientManagerApplication in 6.442 seconds (process running for 7.005)
+2023-05-29 00:52:29 [restartedMain] INFO  : Application started
+2023-05-29 00:52:55 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:52:55 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:52:55 [http-nio-8082-exec-1] INFO  : Completed initialization in 1 ms
+2023-05-29 00:52:56 [http-nio-8082-exec-3] INFO  : PostController::getPost : 1
+2023-05-29 00:52:56 [http-nio-8082-exec-3] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:52:56 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:52:56 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:54:05 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:54:05 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:54:05 [http-nio-8082-exec-9] INFO  : PostController::getPost : 1
+2023-05-29 00:54:05 [http-nio-8082-exec-9] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:30 [http-nio-8082-exec-6] INFO  : PostController::getPost : 1
+2023-05-29 00:55:30 [http-nio-8082-exec-6] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:35 [http-nio-8082-exec-8] INFO  : PostController::getPost : 1
+2023-05-29 00:55:35 [http-nio-8082-exec-8] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:35 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:55:35 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:50 [http-nio-8082-exec-3] INFO  : PostController::getPost : 1
+2023-05-29 00:55:50 [http-nio-8082-exec-3] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:54 [http-nio-8082-exec-1] INFO  : PostController::getPost : 1
+2023-05-29 00:55:54 [http-nio-8082-exec-1] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:54 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:55:54 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:14 [http-nio-8082-exec-6] INFO  : PostController::getPost : 1
+2023-05-29 00:56:14 [http-nio-8082-exec-6] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:19 [http-nio-8082-exec-8] INFO  : PostController::getPost : 1
+2023-05-29 00:56:19 [http-nio-8082-exec-8] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:22 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:56:22 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:22 [http-nio-8082-exec-2] INFO  : PostController::getPost : 1
+2023-05-29 00:56:22 [http-nio-8082-exec-2] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:42 [http-nio-8082-exec-1] INFO  : PostController::getPost : 1
+2023-05-29 00:56:42 [http-nio-8082-exec-1] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:54 [http-nio-8082-exec-9] INFO  : PostController::getPost : 1
+2023-05-29 00:56:54 [http-nio-8082-exec-9] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:57 [http-nio-8082-exec-10] INFO  : PostController::getPost : 1
+2023-05-29 00:56:57 [http-nio-8082-exec-10] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:57 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:56:57 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:59:10 [http-nio-8082-exec-1] INFO  : PostController::getPost : 1
+2023-05-29 00:59:10 [http-nio-8082-exec-1] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 01:00:11 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 01:00:11 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)

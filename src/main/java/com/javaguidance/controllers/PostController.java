@@ -11,6 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController()
+
+
+
 @Slf4j
 public class PostController {
     @Autowired
@@ -27,6 +30,9 @@ public class PostController {
         log.info("PostController::updatePost : {}", post);
         return new ResponseEntity<>(postService.update(post),HttpStatus.OK);
     }
+
+    
+
 
     @GetMapping("post/{id}")
     public ResponseEntity<Post> getPost(@PathVariable int id) throws PostNotFoundException {

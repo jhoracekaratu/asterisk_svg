@@ -3,6 +3,7 @@ return(
 <>
 <div className="Right">
 {/* ?for adverts no styling */}
+advertisements
 </div>
     
 </>

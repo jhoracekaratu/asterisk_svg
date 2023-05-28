@@ -1,7 +1,9 @@
+import styles from "./Left.module.css"
 function LeftNav(){
     return(
     <>
     <div className="Left "> 
+    <div className={styles.content}>
     <div class="accordion " id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -20,6 +22,10 @@ function LeftNav(){
 
 
 </div>
+      
+    </div>
+
+ 
     </div>
         
     </>

@@ -1,19 +1,29 @@
 .content{
     background-color: white;
     margin: 1% 1%;
+    border-radius: 5px;
+   padding: 1% 5%;
 }
 .pills{
     /* check how to use sass */
     /* full css and bootstrap typography styling */
+      /* consider this color for the pills */
+    /* background-color: antiquewhite; */
 
 }
 
-.pills .header{
+.content > .header{
     /* Auto capitalization */
+    text-transform: capitalize;
+
 
 }
 
-.pills .body{
+
+
+.pills .body {
     /* indentation for body */
+    /* background-color: black; */
+    text-indent: 2%;
     
 }

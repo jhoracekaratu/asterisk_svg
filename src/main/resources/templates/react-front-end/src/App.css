@@ -45,6 +45,7 @@ height: 100vh;
 
 }
 .Content .Main{
+
   position: absolute;
   top: 0px;
   width: 65%;
@@ -53,13 +54,13 @@ height: 100vh;
 }
 
 .Content .Left{
+
   position: absolute;
   width: 15%;
   top: 0px;
 }
 
 .Content .Right{
-  /* background-color: red; */
   position: absolute;
   left: 80%;
   width:20%;

@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,6 +29,14 @@ public class SecurityConfig {
                     .anyRequest()
                     .authenticated()
                     )
+                .cors().configurationSource(request -> {
+                   CorsConfiguration cors=new CorsConfiguration();
+                   cors.setAllowedOrigins(List.of("http://localhost:3000"));
+                   cors.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
+                   cors.setAllowedHeaders(List.of("*"));
+                   cors.setAllowCredentials(true);
+                   return cors;
+                }).and()
                 .httpBasic()
                 ;
 
