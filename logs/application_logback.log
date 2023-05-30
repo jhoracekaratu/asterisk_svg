@@ -218,3 +218,7 @@
 2023-05-29 00:59:10 [http-nio-8082-exec-1] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
 2023-05-29 01:00:11 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
 2023-05-29 01:00:11 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 01:16:03 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m6s999ms819µs791ns).
+2023-05-29 01:16:04 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 01:16:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 01:16:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
