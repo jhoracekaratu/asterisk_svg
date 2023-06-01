@@ -21,6 +21,6 @@ public class UserDetailsService implements org.springframework.security.core.use
                 fetchedUser.get().getPassword(),
                 Collections.emptyList()
                 );
-        else throw new UsernameNotFoundException("User not found");
+        else throw new UsernameNotFoundException("User "+username+" not found");
     }
 }

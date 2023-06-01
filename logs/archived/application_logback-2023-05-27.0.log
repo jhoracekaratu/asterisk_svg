@@ -819,7 +819,7 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2023-05-27 18:27:22 [http-nio-8081-exec-1] INFO  : PostController::getPost : {}1
 2023-05-27 18:27:22 [http-nio-8081-exec-1] ERROR : PostNotFoundException::constructor  :Post Id : {1}
 2023-05-27 18:27:22 [http-nio-8081-exec-1] ERROR : GlobalExceptionHandler::handlePostNotFoundException
-2023-05-27 18:27:23 [http-nio-8081-exec-1] WARN  : Resolved [com.javaguidance.exceptions.PostNotFoundException: Post Id : {1}]
+2023-05-27 18:27:23 [http-nio-8081-exec-1] WARN  : Resolved [com.javaguidance.exceptions.ResourceNotFoundException: Post Id : {1}]
 2023-05-27 18:32:09 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-05-27 18:32:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
 2023-05-27 18:32:09 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
@@ -1453,7 +1453,7 @@ jakarta.servlet.ServletException: No adapter for handler [com.javaguidance.contr
 2023-05-27 18:57:40 [http-nio-8081-exec-3] INFO  : PostController::getPost : {}1
 2023-05-27 18:57:40 [http-nio-8081-exec-3] ERROR : PostNotFoundException::constructor  :Post Id : {1}
 2023-05-27 18:57:40 [http-nio-8081-exec-3] ERROR : GlobalExceptionHandler::handlePostNotFoundException
-2023-05-27 18:57:40 [http-nio-8081-exec-3] WARN  : Resolved [com.javaguidance.exceptions.PostNotFoundException: Post Id : {1}]
+2023-05-27 18:57:40 [http-nio-8081-exec-3] WARN  : Resolved [com.javaguidance.exceptions.ResourceNotFoundException: Post Id : {1}]
 2023-05-27 18:57:43 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-05-27 18:57:43 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
 2023-05-27 18:57:43 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
@@ -1490,7 +1490,7 @@ jakarta.servlet.ServletException: No adapter for handler [com.javaguidance.contr
 2023-05-27 18:58:28 [http-nio-8081-exec-1] INFO  : PostController::getPost : {}1
 2023-05-27 18:58:28 [http-nio-8081-exec-1] ERROR : PostNotFoundException::constructor  :Post Id : {1}
 2023-05-27 18:58:28 [http-nio-8081-exec-1] ERROR : GlobalExceptionHandler::handlePostNotFoundException
-2023-05-27 18:58:28 [http-nio-8081-exec-1] WARN  : Resolved [com.javaguidance.exceptions.PostNotFoundException: Post Id : {1}]
+2023-05-27 18:58:28 [http-nio-8081-exec-1] WARN  : Resolved [com.javaguidance.exceptions.ResourceNotFoundException: Post Id : {1}]
 2023-05-27 19:00:07 [http-nio-8081-exec-2] INFO  : PostController::getPost : {}1
 2023-05-27 19:00:08 [http-nio-8081-exec-2] ERROR : [THYMELEAF][http-nio-8081-exec-2] Exception processing template "post/1": Error resolving template [post/1], template might not exist or might not be accessible by any of the configured Template Resolvers
 org.thymeleaf.exceptions.TemplateInputException: Error resolving template [post/1], template might not exist or might not be accessible by any of the configured Template Resolvers

@@ -1,12 +1,12 @@
 package com.javaguidance.services;
 
-import com.javaguidance.exceptions.PostNotFoundException;
+import com.javaguidance.exceptions.ResourceNotFoundException;
 import com.javaguidance.models.Post;
 import com.javaguidance.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.List;
 
 @Service
 public class PostService {
@@ -18,13 +18,18 @@ public class PostService {
         return savedPost;
     }
 
-    public Post read(int id) throws PostNotFoundException {
-        Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post Id : {"+id+"}"));
+    public Post read(int id) throws ResourceNotFoundException {
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post Id : {"+id+"}"));
         return post;
     }
 
-    public boolean delete(int id) throws PostNotFoundException {
-        Post post = postRepository.findById(id).orElseThrow(() -> new PostNotFoundException("Post Id : {"+id+"}"));
+    public List<Post> readAll() {
+        return postRepository.findAll();
+
+    }
+
+    public boolean delete(int id) throws ResourceNotFoundException {
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post Id : {"+id+"}"));
         postRepository.delete(post);
         return true;
     }
@@ -33,4 +38,17 @@ public class PostService {
         Post post=postRepository.save(update);
         return post;
     }
+
+    public List<Post> getPostsByUser(Integer id) throws ResourceNotFoundException {
+      return  postRepository.findPostsByUsersId(id).orElseThrow(()->new ResourceNotFoundException("Posts not found"));
+
+    }
+    public Boolean checkPost(Integer id) throws ResourceNotFoundException {
+        return  postRepository.existsById(id);
+
+    }
+
+
+
+
 }

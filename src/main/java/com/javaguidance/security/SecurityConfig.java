@@ -29,14 +29,16 @@ public class SecurityConfig {
                     .anyRequest()
                     .authenticated()
                     )
+
                 .cors().configurationSource(request -> {
                    CorsConfiguration cors=new CorsConfiguration();
-                   cors.setAllowedOrigins(List.of("http://localhost:3000"));
-                   cors.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
+                   cors.setAllowedOriginPatterns(List.of("*"));
+                   cors.setAllowedMethods(List.of("*"));
                    cors.setAllowedHeaders(List.of("*"));
                    cors.setAllowCredentials(true);
                    return cors;
                 }).and()
+                .csrf().disable()
                 .httpBasic()
                 ;
 

@@ -1,0 +1,224 @@
+2023-05-29 00:12:11 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h2m1s265ms242µs536ns).
+2023-05-29 00:12:15 [http-nio-8081-exec-7] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-7] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:15 [http-nio-8081-exec-23] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-24] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-26] WARN  : SQL Error: 0, SQLState: null
+2023-05-29 00:12:15 [http-nio-8081-exec-24] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:15 [http-nio-8081-exec-23] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:15 [http-nio-8081-exec-26] ERROR : HikariPool-1 - Interrupted during connection acquisition
+2023-05-29 00:12:16 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:12:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:12:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:15:33 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 38306 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:15:33 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:15:34 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:15:34 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:15:34 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:15:34 [restartedMain] INFO  : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:15:35 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:15:35 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:15:35 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:15:35 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:15:35 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:15:35 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1690 ms
+2023-05-29 00:15:35 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:15:36 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:15:36 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:15:36 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c826180
+2023-05-29 00:15:36 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:15:36 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:15:37 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:15:37 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:15:37 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:15:38 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@110a1abe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c75e03c, org.springframework.security.web.context.SecurityContextHolderFilter@e08d2b1, org.springframework.security.web.header.HeaderWriterFilter@38f8ed51, org.springframework.security.web.csrf.CsrfFilter@3a7a926e, org.springframework.security.web.authentication.logout.LogoutFilter@19b19cfc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7810a249, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32390668, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d77257e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d066954, org.springframework.security.web.access.ExceptionTranslationFilter@22fa4ec0, org.springframework.security.web.access.intercept.AuthorizationFilter@778112b5]
+2023-05-29 00:15:39 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:15:39 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:15:39 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:15:39 [restartedMain] INFO  : Started ClientManagerApplication in 6.255 seconds (process running for 6.772)
+2023-05-29 00:15:39 [restartedMain] INFO  : Application started
+2023-05-29 00:16:10 [http-nio-8082-exec-2] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:16:10 [http-nio-8082-exec-2] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:16:10 [http-nio-8082-exec-2] INFO  : Completed initialization in 3 ms
+2023-05-29 00:16:24 [http-nio-8082-exec-3] INFO  : PostController::getPost : 1
+2023-05-29 00:16:24 [http-nio-8082-exec-3] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:21:16 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:21:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:21:16 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:21:36 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 38956 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:21:36 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:21:36 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:21:36 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:21:37 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:21:37 [restartedMain] INFO  : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:21:38 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:21:38 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:21:38 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:21:38 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:21:38 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:21:38 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1704 ms
+2023-05-29 00:21:38 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:21:38 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:21:39 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:21:39 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c396388
+2023-05-29 00:21:39 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:21:39 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:21:40 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:21:40 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:21:40 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:21:41 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b688fe8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7810a249, org.springframework.security.web.context.SecurityContextHolderFilter@17c7fb28, org.springframework.security.web.header.HeaderWriterFilter@af4bc95, org.springframework.security.web.csrf.CsrfFilter@3551b81e, org.springframework.security.web.authentication.logout.LogoutFilter@3500faec, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c75ebdf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56c2aba3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32390668, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d3596f0, org.springframework.security.web.access.ExceptionTranslationFilter@d87f609, org.springframework.security.web.access.intercept.AuthorizationFilter@562438de]
+2023-05-29 00:21:42 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:21:42 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:21:42 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:21:42 [restartedMain] INFO  : Started ClientManagerApplication in 6.411 seconds (process running for 6.905)
+2023-05-29 00:21:42 [restartedMain] INFO  : Application started
+2023-05-29 00:22:07 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:22:07 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:22:07 [http-nio-8082-exec-1] INFO  : Completed initialization in 1 ms
+2023-05-29 00:25:10 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:25:10 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:25:10 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:25:30 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 39300 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:25:30 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:25:30 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:25:30 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:25:31 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:25:31 [restartedMain] INFO  : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:25:32 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:25:32 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:25:32 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:25:32 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:25:32 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:25:32 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1689 ms
+2023-05-29 00:25:32 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:25:32 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:25:32 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:25:33 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c396388
+2023-05-29 00:25:33 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:25:33 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:25:34 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:25:34 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:25:34 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:25:34 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b688fe8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7810a249, org.springframework.security.web.context.SecurityContextHolderFilter@17c7fb28, org.springframework.security.web.header.HeaderWriterFilter@af4bc95, org.springframework.security.web.csrf.CsrfFilter@3551b81e, org.springframework.security.web.authentication.logout.LogoutFilter@3500faec, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c75ebdf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56c2aba3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32390668, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d3596f0, org.springframework.security.web.access.ExceptionTranslationFilter@d87f609, org.springframework.security.web.access.intercept.AuthorizationFilter@562438de]
+2023-05-29 00:25:36 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:25:36 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:25:36 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:25:36 [restartedMain] INFO  : Started ClientManagerApplication in 6.365 seconds (process running for 6.862)
+2023-05-29 00:25:36 [restartedMain] INFO  : Application started
+2023-05-29 00:25:45 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:25:45 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:25:45 [http-nio-8082-exec-1] INFO  : Completed initialization in 3 ms
+2023-05-29 00:26:27 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:26:27 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:26:27 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:33:45 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 40727 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:33:45 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:33:45 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:33:45 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:33:46 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:33:46 [restartedMain] INFO  : Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:33:46 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:33:46 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:33:46 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:33:46 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:33:47 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:33:47 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1584 ms
+2023-05-29 00:33:47 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:33:47 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:33:47 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:33:48 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8a21417
+2023-05-29 00:33:48 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:33:48 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:33:49 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:33:49 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:33:49 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:33:49 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6db6be32, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dc7f724, org.springframework.security.web.context.SecurityContextHolderFilter@6c894634, org.springframework.security.web.header.HeaderWriterFilter@54bbcd63, org.springframework.security.web.csrf.CsrfFilter@3afacc8e, org.springframework.security.web.authentication.logout.LogoutFilter@5ea70868, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ecfddd5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a5001bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43db295a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c37019d, org.springframework.security.web.access.ExceptionTranslationFilter@5f83ae34, org.springframework.security.web.access.intercept.AuthorizationFilter@1753e7bb]
+2023-05-29 00:33:50 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:33:50 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:33:50 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:33:50 [restartedMain] INFO  : Started ClientManagerApplication in 6.139 seconds (process running for 6.593)
+2023-05-29 00:33:50 [restartedMain] INFO  : Application started
+2023-05-29 00:35:25 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:35:25 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:35:25 [http-nio-8082-exec-1] INFO  : Completed initialization in 2 ms
+2023-05-29 00:36:06 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:36:06 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 00:36:06 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2023-05-29 00:52:23 [restartedMain] INFO  : Starting ClientManagerApplication using Java 17.0.6 with PID 42808 (/home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack/target/classes started by hashicorp in /home/hashicorp/javaguidance.com/spring_template_with_log_and_webpack)
+2023-05-29 00:52:23 [restartedMain] INFO  : No active profile set, falling back to 1 default profile: "default"
+2023-05-29 00:52:23 [restartedMain] INFO  : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-29 00:52:23 [restartedMain] INFO  : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-29 00:52:24 [restartedMain] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-29 00:52:24 [restartedMain] INFO  : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2023-05-29 00:52:25 [restartedMain] INFO  : Tomcat initialized with port(s): 8082 (http)
+2023-05-29 00:52:25 [restartedMain] INFO  : Initializing ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:52:25 [restartedMain] INFO  : Starting service [Tomcat]
+2023-05-29 00:52:25 [restartedMain] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-29 00:52:25 [restartedMain] INFO  : Initializing Spring embedded WebApplicationContext
+2023-05-29 00:52:25 [restartedMain] INFO  : Root WebApplicationContext: initialization completed in 1634 ms
+2023-05-29 00:52:25 [restartedMain] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-29 00:52:25 [restartedMain] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-29 00:52:26 [restartedMain] INFO  : HikariPool-1 - Starting...
+2023-05-29 00:52:26 [restartedMain] INFO  : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4206d7b4
+2023-05-29 00:52:26 [restartedMain] INFO  : HikariPool-1 - Start completed.
+2023-05-29 00:52:26 [restartedMain] INFO  : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-29 00:52:27 [restartedMain] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-29 00:52:27 [restartedMain] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 00:52:27 [restartedMain] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-29 00:52:28 [restartedMain] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1c37019d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63dcac14, org.springframework.security.web.context.SecurityContextHolderFilter@6c894634, org.springframework.security.web.header.HeaderWriterFilter@54bbcd63, org.springframework.web.filter.CorsFilter@3bc3d973, org.springframework.security.web.csrf.CsrfFilter@3afacc8e, org.springframework.security.web.authentication.logout.LogoutFilter@5ea70868, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@778112b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a5001bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43db295a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@393f67f8, org.springframework.security.web.access.ExceptionTranslationFilter@5f83ae34, org.springframework.security.web.access.intercept.AuthorizationFilter@1753e7bb]
+2023-05-29 00:52:29 [restartedMain] INFO  : LiveReload server is running on port 35729
+2023-05-29 00:52:29 [restartedMain] INFO  : Starting ProtocolHandler ["http-nio-8082"]
+2023-05-29 00:52:29 [restartedMain] INFO  : Tomcat started on port(s): 8082 (http) with context path ''
+2023-05-29 00:52:29 [restartedMain] INFO  : Started ClientManagerApplication in 6.442 seconds (process running for 7.005)
+2023-05-29 00:52:29 [restartedMain] INFO  : Application started
+2023-05-29 00:52:55 [http-nio-8082-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-29 00:52:55 [http-nio-8082-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2023-05-29 00:52:55 [http-nio-8082-exec-1] INFO  : Completed initialization in 1 ms
+2023-05-29 00:52:56 [http-nio-8082-exec-3] INFO  : PostController::getPost : 1
+2023-05-29 00:52:56 [http-nio-8082-exec-3] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:52:56 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:52:56 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:54:05 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:54:05 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:54:05 [http-nio-8082-exec-9] INFO  : PostController::getPost : 1
+2023-05-29 00:54:05 [http-nio-8082-exec-9] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:30 [http-nio-8082-exec-6] INFO  : PostController::getPost : 1
+2023-05-29 00:55:30 [http-nio-8082-exec-6] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:35 [http-nio-8082-exec-8] INFO  : PostController::getPost : 1
+2023-05-29 00:55:35 [http-nio-8082-exec-8] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:35 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:55:35 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:50 [http-nio-8082-exec-3] INFO  : PostController::getPost : 1
+2023-05-29 00:55:50 [http-nio-8082-exec-3] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:54 [http-nio-8082-exec-1] INFO  : PostController::getPost : 1
+2023-05-29 00:55:54 [http-nio-8082-exec-1] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:55:54 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:55:54 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:14 [http-nio-8082-exec-6] INFO  : PostController::getPost : 1
+2023-05-29 00:56:14 [http-nio-8082-exec-6] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:19 [http-nio-8082-exec-8] INFO  : PostController::getPost : 1
+2023-05-29 00:56:19 [http-nio-8082-exec-8] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:22 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:56:22 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:22 [http-nio-8082-exec-2] INFO  : PostController::getPost : 1
+2023-05-29 00:56:22 [http-nio-8082-exec-2] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:42 [http-nio-8082-exec-1] INFO  : PostController::getPost : 1
+2023-05-29 00:56:42 [http-nio-8082-exec-1] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 00:56:47 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:54 [http-nio-8082-exec-9] INFO  : PostController::getPost : 1
+2023-05-29 00:56:54 [http-nio-8082-exec-9] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:57 [http-nio-8082-exec-10] INFO  : PostController::getPost : 1
+2023-05-29 00:56:57 [http-nio-8082-exec-10] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:56:57 [http-nio-8082-exec-7] INFO  : PostController::getPost : 1
+2023-05-29 00:56:57 [http-nio-8082-exec-7] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 00:59:10 [http-nio-8082-exec-1] INFO  : PostController::getPost : 1
+2023-05-29 00:59:10 [http-nio-8082-exec-1] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 01:00:11 [http-nio-8082-exec-4] INFO  : PostController::getPost : 1
+2023-05-29 01:00:11 [http-nio-8082-exec-4] INFO  : PostController::getPost : --fetched data Post(id=1, data=data)
+2023-05-29 01:16:03 [HikariPool-1 housekeeper] WARN  : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m6s999ms819µs791ns).
+2023-05-29 01:16:04 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-29 01:16:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2023-05-29 01:16:04 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
