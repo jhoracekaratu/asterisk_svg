@@ -11,31 +11,31 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("api")
+@RestController()
 public class UserController {
     @Autowired
     UserRepository userRepository;
     @Autowired
     ModelMapper modelMapper;
-    @GetMapping("/users")
+    @GetMapping("/api/users")
     public ResponseEntity<List<User>> getAllUsers(){
 
     return new ResponseEntity<>( userRepository.findAll(), HttpStatus.OK);
     }
-    @GetMapping("/users/{id}")
+    @GetMapping("/api/users/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Integer id) throws ResourceNotFoundException {
        User user= userRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("User with id '"+id+"' not found"));
     return new ResponseEntity<>(user , HttpStatus.OK);
     }
 
-    @PostMapping("/users")
+    @PostMapping("/api/users")
     public ResponseEntity<User> createUser(@RequestBody User user) throws ResourceNotFoundException {
         User createdUser=userRepository.save(user);
         return new ResponseEntity<>(createdUser , HttpStatus.CREATED);
     }
 
 
-    @PutMapping ("/users/{id}")
+    @PutMapping ("/api/users/{id}")
     public ResponseEntity<User> createUser(@PathVariable Integer id,@RequestBody User user) throws ResourceNotFoundException {
         User _user=userRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("User not found"));
         _user.setUsername(user.getUsername());
@@ -45,14 +45,14 @@ public class UserController {
         return new ResponseEntity<>(_user , HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/users/{id}")
+    @DeleteMapping("/api/users/{id}")
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable Integer id) throws ResourceNotFoundException {
         userRepository.deleteById(id);
 
         return new ResponseEntity<>( HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping("/users")
+    @DeleteMapping("/api/users")
     public ResponseEntity<HttpStatus> deleteAllUsers(@PathVariable Integer id) throws ResourceNotFoundException {
         userRepository.deleteAll();
 

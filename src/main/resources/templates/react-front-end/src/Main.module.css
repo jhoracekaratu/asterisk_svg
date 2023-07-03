@@ -5,6 +5,8 @@
    padding: 1% 5%;
 }
 .pills{
+    border: 1px solid green;
+    margin: 3%;
     /* check how to use sass */
     /* full css and bootstrap typography styling */
       /* consider this color for the pills */
@@ -27,3 +29,4 @@
     text-indent: 2%;
     
 }
+

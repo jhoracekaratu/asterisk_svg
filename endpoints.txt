@@ -1,0 +1,51 @@
+USERS
+	GET
+		--getOne	/api/users/{id}
+		--getAll	/api/users
+	POST
+		/api/users
+	PUT
+		/api/users/{id}
+	DELETE
+		--deleteOne	/api/users/{id}
+		--delteAll 	/api/users
+POSTS
+	GET
+		--getAll	/api/posts
+		--getOne	/api/posts/{id}
+		--getUserPosts  /api/users/{userid}/posts
+		--getPostsUsers /api/posts/{postid}/users
+
+	POST
+		/api/users/{userid}/posts
+		/api/users/{userid}/posts/{postid}/postparts
+	PUT
+		/api/posts
+	    /api/users/{userid}/posts/{postid}/postparts
+	DELETE
+		/api/posts/{id}
+ROLES
+	GET
+		--getUsersRoles /api/users/{userid}/roles
+	POST
+		/api/users/{userid}/roles
+	PUT
+		/api/users/{userid}/roles/{roleid}
+	DELETE
+		/api/users/{userid}/roles/{roleid}
+
+
+Groups
+	GET
+		--api/groups/{groupid}/posts
+		--api/posts/{postid}/groups
+		/api/groups
+		/api/groups/posts
+	POST
+		api/posts/{postid}/groups
+		/api/groups/posts
+	PUT
+		api/posts/{postid}/groups
+		/api/groups
+	DELETE
+		api/users/{userid}/posts/{postid}/groups/{groupid}

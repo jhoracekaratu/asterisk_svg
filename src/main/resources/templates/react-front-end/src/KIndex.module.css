@@ -1,0 +1,24 @@
+.link{
+  
+    position: absolute;
+    left: 0%;
+    top: 30%;
+    
+
+}
+
+.delete_button{
+    position: absolute;
+    left: 80%;
+    top: 17%;
+
+
+}
+
+.container{
+    position: relative;
+    margin-bottom: 3%;
+    /* border: 1px solid black; */
+    height: 60px;
+    /* height: 20%; */
+}

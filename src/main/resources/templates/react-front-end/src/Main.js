@@ -1,16 +1,20 @@
-import { useEffect, useState } from "react";
-import styles from "./Main.module.css"
-function Main(){
+import { useEffect, useState,useContext } from "react";
+import styles from "./Main.module.css";
+import { UserContext } from "./UserContext";
+function Main(props){
+    const userContext = useContext(UserContext);
     const fetchPostData=()=>{
-        const url="http://localhost:8082/post/1"
+        const url="http://localhost:8082/api/postbyslug/"+props.slug.slug
         fetch(url, {method:'GET', 
 headers: {'Authorization': 'Basic ' + btoa('admin:admin')}})
             .then((response)=>{
                return response.json()
             })
             .then((post)=>{
-            console.log(post)
-                setPost(post)
+                console.log(post)
+                setPost(post.post)
+                userContext.setPostcontext(post.slugs)
+                userContext.setRelatedcontext(post.related)
             }).catch((error) => console.log(error));
 
     }
@@ -24,6 +28,9 @@ headers: {'Authorization': 'Basic ' + btoa('admin:admin')}})
         fetchPostData()
        
     },[])
+        
+
+
 
     return(
     <>
@@ -35,7 +42,7 @@ headers: {'Authorization': 'Basic ' + btoa('admin:admin')}})
      From admin, put markers to seperate as pills with zebra coloring */}
 
      {/* style for topic here */}
-     <h1 className={`${styles.header}`}>{post.data}</h1>
+     <h1 className={`${styles.header}`}>{post.title}</h1>
 
      {/* seperate pills db should save each of the elements seperately
      title
@@ -51,13 +58,27 @@ headers: {'Authorization': 'Basic ' + btoa('admin:admin')}})
      the site has to be very dynamic. I have created it rather than wordpress so i will customize it deep. kafka and so om. But first, sass and webpack perfection
       */}
 
-     <div className={`${styles.pills}`} >
+    
      
+{/* create a loop to itereate the sub title object and map to h2s */}
 
-     <h2 className={`${styles.header}`}>thread types</h2>
-
-    <p className={`${styles.body}`}>Threads assist to handle more than one task simulataneously.</p>
+   {
+   
+    post.title!=undefined &&  Array.prototype.map.call(post.postParts, part => {
+        
+    
+            return (
+            <div className={`${styles.pills}`} key={part.id} >
+            <h2 className={`${styles.header}`}>{part.sub_title}</h2>
+            <p className={`${styles.body}`} dangerouslySetInnerHTML={{ __html: part.sub_content }}></p>
      </div>
+                
+            );
+    
+    }
+)
+    
+}
     
     </div>
     
