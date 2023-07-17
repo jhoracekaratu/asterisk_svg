@@ -1,6 +1,10 @@
 import { useEffect, useState,useContext } from "react";
 import styles from "./Main.module.css";
 import { UserContext } from "./UserContext";
+import "highlight.js/styles/github.css";
+import hljs from "highlight.js";
+
+
 function Main(props){
     const userContext = useContext(UserContext);
     const fetchPostData=()=>{
@@ -24,7 +28,9 @@ headers: {'Authorization': 'Basic ' + btoa('admin:admin')}})
 
     const [post,setPost]=useState([])
     useEffect(()=>{
+
     test()
+  
         fetchPostData()
        
     },[])
@@ -38,29 +44,8 @@ headers: {'Authorization': 'Basic ' + btoa('admin:admin')}})
 
     <div className={styles.content}>
 
-    {/* let content be in fom of pill form from the start.
-     From admin, put markers to seperate as pills with zebra coloring */}
+     <h2 className={`${styles.header} mb-4`}>{post.title}</h2>
 
-     {/* style for topic here */}
-     <h1 className={`${styles.header}`}>{post.title}</h1>
-
-     {/* seperate pills db should save each of the elements seperately
-     title
-     list of pills and their headings
-     
-     list of pills, java will seperate the headeings
-     date
-     hit count
-     author
-     status, published or not
-     updates history
-     
-     the site has to be very dynamic. I have created it rather than wordpress so i will customize it deep. kafka and so om. But first, sass and webpack perfection
-      */}
-
-    
-     
-{/* create a loop to itereate the sub title object and map to h2s */}
 
    {
    
@@ -69,17 +54,25 @@ headers: {'Authorization': 'Basic ' + btoa('admin:admin')}})
     
             return (
             <div className={`${styles.pills}`} key={part.id} >
-            <h2 className={`${styles.header}`}>{part.sub_title}</h2>
-            <p className={`${styles.body}`} dangerouslySetInnerHTML={{ __html: part.sub_content }}></p>
+            <h3 className={`${styles.subtitle} mb-4`}>{part.sub_title}</h3>
+            <p className={`${styles.body} mb-4`} dangerouslySetInnerHTML={{ __html: part.sub_content }}></p>
      </div>
                 
             );
     
     }
 )
+
+   
     
 }
-    
+
+{document.querySelectorAll("pre ").forEach((el) => {
+        hljs.highlightElement(el);
+        console.log(el)
+      })}
+      {/* {hljs.initHighlightingOnLoad()} */}
+
     </div>
     
     </div>

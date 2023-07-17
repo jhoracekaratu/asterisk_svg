@@ -1,11 +1,13 @@
 .content{
+    @import url('https://fonts.googleapsis.com/css2?family=Cantarell&display=swap');
+    font-family: 'Cantarell', sans-serif;
     background-color: white;
     margin: 1% 1%;
     border-radius: 5px;
    padding: 1% 5%;
 }
 .pills{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     margin: 3%;
     /* check how to use sass */
     /* full css and bootstrap typography styling */
@@ -17,16 +19,46 @@
 .content > .header{
     /* Auto capitalization */
     text-transform: capitalize;
+    font-weight: 700;
+    /* font-size: 24px; */
+    color:rgb(28, 30, 33);
 
 
 }
 
+
+
+.pills .subtitle {
+ color:  rgb(28, 30, 33);
+ font-weight: 600;
+ font-size: 25px;
+    
+}
 
 
 .pills .body {
     /* indentation for body */
-    /* background-color: black; */
+   color: rgb(28, 30, 33);
+   font-weight: 400;
     text-indent: 2%;
     
 }
+
+
+
+/* pre {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+	overflow-y: hidden;
+	font-size: 12px;
+	line-height: 20px;
+	background: #313131;
+	border: 1px solid #777;
+}
+pre code {
+	padding: 10px;
+	color: #333;
+} */
 

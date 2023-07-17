@@ -24,7 +24,7 @@ const [relatedcontext, setRelatedcontext]=useState();
   // create router here
   return (
     <UserContext.Provider value={{user,postcontext,setPostcontext,relatedcontext,setRelatedcontext}}>
-    <div className='container-fluid'>
+    <div className=''>
      {/* Add BrowserRouter */}
      <BrowserRouter>
       <Routes>

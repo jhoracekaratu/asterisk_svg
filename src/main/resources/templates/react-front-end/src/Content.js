@@ -39,7 +39,7 @@ const params=useParams()
    
 
     </div>
-   <div id="footer" className="" style={{}}>
+   <div id="footer" className="bg-light" style={{}}>
 <Footer/>
    </div>
     </>

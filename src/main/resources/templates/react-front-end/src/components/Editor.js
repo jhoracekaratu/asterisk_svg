@@ -7,11 +7,14 @@ function Editor({ onChange, editorLoaded, name, value }) {
   useEffect(() => {
     editorRef.current = {
       CKEditor: require("@ckeditor/ckeditor5-react").CKEditor, // v3+
-      ClassicEditor: require("@ckeditor/ckeditor5-build-classic")
+      ClassicEditor: require("../ckeditor5mybuild")
+    
     };
   }, []);
 
   return (
+
+      // ClassicEditor: require("../ckeditor5mybuild")
     <div>
       {editorLoaded ? (
         <CKEditor
